@@ -17,7 +17,7 @@ type ToDo struct {
 	Text  string
 }
 
-func init() {
+func main() {
 	http.HandleFunc("/", handleIndex)
 	http.HandleFunc("/todo", handleTodos)
 	http.Handle("/assets/", http.StripPrefix("/assets", http.FileServer(http.Dir("assets/"))))
